@@ -159,13 +159,13 @@
         .particle:nth-child(3) { animation-delay: 2.4s; }
         .particle:nth-child(4) { animation-delay: 0.6s; }
 
-        /* Video overlay - very light so gym video stays bright & clear */
+        /* Video overlay - minimal darkening so gym video is bright */
         .video-overlay {
             background: linear-gradient(
                 to bottom,
-                rgba(7, 8, 10, 0.25) 0%,
-                rgba(7, 8, 10, 0.10) 40%,
-                rgba(7, 8, 10, 0.35) 100%
+                rgba(7, 8, 10, 0.12) 0%,
+                rgba(7, 8, 10, 0.05) 40%,
+                rgba(7, 8, 10, 0.18) 100%
             );
         }
 
@@ -347,7 +347,7 @@
 
             <!-- Main Punchy Title with 3D entrance -->
             <h1 class="font-gladiator text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tight leading-none text-white uppercase title-3d hero-text-clear">
-                GLADIATOR <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-500 to-red-600">PRO</span>
+                GLADIATOR <span class="text-red-500" style="text-shadow: 0 2px 6px rgba(0,0,0,0.7);">PRO</span>
                 <span class="block text-2xl sm:text-4xl md:text-5xl tracking-widest text-white mt-2 font-gladiator">FITNESS STUDIO</span>
             </h1>
 
