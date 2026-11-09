@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gladiator Pro Fitness Studio | Sri Ram Nagar, Hyderabad</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter & Bebas Neue for athletic combat aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gladiator: {
+                            base: '#07080a',
+                            surface: '#0f1115',
+                            card: '#15181e',
+                            border: '#232730',
+                            crimson: '#dc2626',
+                            crimsonLight: '#ef4444',
+                            hazard: '#eab308',
+                            steel: '#94a3b8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        gladiator: ['"Bebas Neue"', 'sans-serif'],
+                        heading: ['Inter', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'neon-red': '0 0 25px -3px rgba(220, 38, 38, 0.45)',
+                        'neon-glow': '0 0 45px -5px rgba(239, 68, 68, 0.6)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom scrollbar and backdrop enhancements */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #07080a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #dc2626;
+        }
+
+        /* Hazard stripes styling matching gym's interior pillars */
+        .hazard-border {
+            background: repeating-linear-gradient(
+                -45deg,
+                #eab308,
+                #eab308 12px,
+                #000000 12px,
+                #000000 24px
+            );
+        }
+    </style>
+</head>
+<body class="bg-gladiator-base text-slate-100 font-sans antialiased selection:bg-red-600 selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT BAR (Direct Contact & Address) -->
+    <div class="bg-gradient-to-r from-neutral-950 via-red-950/60 to-neutral-950 border-b border-red-900/30 text-[11px] sm:text-xs py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+            <div class="flex items-center gap-3">
+                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-red-600/30 text-red-400 font-bold uppercase tracking-wider text-[10px] border border-red-500/30">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span> Live Studio
+                </span>
+                <span class="text-slate-300 font-medium">Prop. <strong class="text-white">M.A. Toufeeq</strong></span>
+                <span class="text-neutral-500 hidden md:inline">|</span>
+                <span class="text-slate-300 hidden md:inline"><i class="fa-solid fa-clock text-gladiator-hazard mr-1"></i> Open: 5:30 AM to 11:00 PM</span>
+            </div>
+            <div class="flex items-center gap-4 text-slate-300">
+                <a href="tel:9948313442" class="hover:text-red-400 transition-colors flex items-center gap-1 font-semibold">
+                    <i class="fa-solid fa-phone text-red-500 text-[10px]"></i> 9948313442
+                </a>
+                <span class="text-neutral-600">/</span>
+                <a href="tel:9642172195" class="hover:text-red-400 transition-colors flex items-center gap-1 font-semibold">
+                    9642172195
+                </a>
+                <a href="https://wa.me/919948313442?text=Hi%20Toufeeq%20Bhai,%20I%20want%20to%20know%20more%20about%20Gladiator%20Pro%20Fitness%20Studio" target="_blank" class="text-emerald-400 hover:text-emerald-300 flex items-center gap-1 font-bold">
+                    <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-gladiator-base/90 backdrop-blur-md border-b border-gladiator-border/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-600 to-black p-0.5 shadow-neon-red group-hover:scale-105 transition-transform">
+                    <div class="w-full h-full bg-gladiator-surface rounded-[10px] flex items-center justify-center">
+                        <i class="fa-solid fa-dumbbell text-xl text-red-500 transform -rotate-45"></i>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center">
+                        <span class="font-gladiator text-3xl tracking-wide text-white">GLADIATOR</span>
+                        <span class="font-gladiator text-3xl tracking-wide text-red-500 ml-1.5">PRO</span>
+                    </div>
+                    <span class="block text-[10px] font-heading font-extrabold uppercase tracking-widest text-slate-400 -mt-1">Fitness Studio</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-xs uppercase font-heading font-bold tracking-wider text-slate-300">
+                <a href="#about" class="hover:text-red-500 transition-colors">The Studio</a>
+                <a href="#services" class="hover:text-red-500 transition-colors">Programs</a>
+                <a href="#calculator" class="hover:text-red-500 transition-colors">Readiness Engine</a>
+                <a href="#membership" class="hover:text-red-500 transition-colors">Plans</a>
+                <a href="#location" class="hover:text-red-500 transition-colors">Location</a>
+            </nav>
+
+            <!-- CTA Actions -->
+            <div class="hidden sm:flex items-center gap-3">
+                <button onclick="openModal('trialModal')" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-heading font-black text-xs uppercase tracking-wider shadow-neon-red transition-all">
+                    Free Trial Pass
+                </button>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-neutral-800">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-gladiator-surface border-b border-gladiator-border px-4 py-5 space-y-3">
+            <a href="#about" class="block py-2 text-sm font-semibold text-slate-300 hover:text-white">The Studio</a>
+            <a href="#services" class="block py-2 text-sm font-semibold text-slate-300 hover:text-white">Programs & Training</a>
+            <a href="#calculator" class="block py-2 text-sm font-semibold text-slate-300 hover:text-white">Readiness Engine</a>
+            <a href="#membership" class="block py-2 text-sm font-semibold text-slate-300 hover:text-white">Membership Plans</a>
+            <a href="#location" class="block py-2 text-sm font-semibold text-slate-300 hover:text-white">Location & Contact</a>
+            <button onclick="openModal('trialModal')" class="w-full mt-2 py-3 rounded-xl bg-red-600 text-white font-bold text-sm uppercase tracking-wider">
+                Claim 1-Day Free Pass
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION WITH GYM INTERIOR ATMOSPHERE -->
+    <section class="relative min-h-[92vh] flex items-center justify-center overflow-hidden bg-gladiator-base text-white">
+        
+        <!-- Ambient Red Neon & Lighting Grid Background -->
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-red-950/40 via-gladiator-base to-black z-0"></div>
+        <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-red-600 via-rose-500 to-red-600 shadow-[0_0_25px_#dc2626] z-10"></div>
+        <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-full max-w-4xl h-80 bg-red-600/20 blur-[140px] pointer-events-none z-0"></div>
+
+        <!-- HERO CONTENT CONTAINER -->
+        <div class="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center flex flex-col items-center">
+            
+            <!-- Prop / Location Pill -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-black/85 backdrop-blur-md border border-red-500/40 text-xs uppercase font-heading font-bold text-gladiator-hazard tracking-wider shadow-neon-red mb-6 animate-pulse">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-600"></span>
+                <span>Prop. M.A. Toufeeq • Sri Ram Nagar, Hyderabad</span>
+            </div>
+
+            <!-- Main Punchy Title -->
+            <h1 class="font-gladiator text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tight leading-none text-white uppercase drop-shadow-[0_10px_25px_rgba(0,0,0,0.9)]">
+                GLADIATOR <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-500 to-red-600">PRO</span>
+                <span class="block text-2xl sm:text-4xl md:text-5xl tracking-widest text-slate-200 mt-2 font-gladiator">FITNESS STUDIO</span>
+            </h1>
+
+            <p class="mt-6 text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed drop-shadow">
+                Hyderabad's premier training floor with red LED ceiling aesthetics, heavy dumbbells up to 60kg, cardio decks, and certified personal trainers for both <strong class="text-white">Ladies & Gents</strong>.
+            </p>
+
+            <!-- Card Highlights Tags -->
+            <div class="flex flex-wrap items-center justify-center gap-2.5 mt-6 max-w-xl">
+                <span class="px-3.5 py-1.5 rounded-xl bg-gladiator-card border border-neutral-800 text-xs font-semibold text-slate-200 flex items-center gap-1.5 shadow-sm">
+                    <i class="fa-solid fa-heart-pulse text-gladiator-crimson"></i> Cardio Deck
+                </span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-gladiator-card border border-neutral-800 text-xs font-semibold text-slate-200 flex items-center gap-1.5 shadow-sm">
+                    <i class="fa-solid fa-dumbbell text-gladiator-crimson"></i> Heavy Strength
+                </span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-gladiator-card border border-neutral-800 text-xs font-semibold text-slate-200 flex items-center gap-1.5 shadow-sm">
+                    <i class="fa-solid fa-fire text-gladiator-hazard"></i> Weight Gain & Loss
+                </span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-gladiator-card border border-neutral-800 text-xs font-semibold text-slate-200 flex items-center gap-1.5 shadow-sm">
+                    <i class="fa-solid fa-apple-whole text-emerald-400"></i> Diet Counselling
+                </span>
+            </div>
+
+            <!-- Primary Action Buttons -->
+            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+                <button onclick="openModal('trialModal')" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-red-600 via-rose-600 to-red-700 hover:from-red-500 hover:to-rose-600 text-white font-heading font-black text-sm uppercase tracking-wider shadow-neon-red hover:shadow-neon-glow transition-all transform hover:-translate-y-1">
+                    Claim 1-Day Free Pass <i class="fa-solid fa-arrow-right ml-2"></i>
+                </button>
+                <a href="https://wa.me/919948313442?text=Hi%20Toufeeq%20Bhai,%20I%20am%20interested%20in%20joining%20Gladiator%20Pro%20Fitness%20Studio!" target="_blank" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-emerald-600/90 hover:bg-emerald-600 backdrop-blur-md border border-emerald-500/50 text-white font-heading font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2.5 transition-all shadow-md">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    Chat With Toufeeq Bhai
+                </a>
+            </div>
+
+            <!-- Timing & Location Quick Banner -->
+            <div class="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
+                <div class="flex items-center gap-1.5 text-slate-200">
+                    <i class="fa-solid fa-clock text-gladiator-hazard"></i>
+                    <span>5:30 AM – 11:00 PM Daily</span>
+                </div>
+                <span class="text-neutral-600">•</span>
+                <div class="flex items-center gap-1.5 text-slate-200">
+                    <i class="fa-solid fa-location-dot text-gladiator-crimson"></i>
+                    <span>Sri Ram Nagar, Hyderabad</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Scroll down indicator -->
+        <a href="#about" class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 text-slate-400 hover:text-white transition-colors flex flex-col items-center text-[10px] uppercase font-bold tracking-widest gap-1">
+            <span>Explore Studio</span>
+            <i class="fa-solid fa-chevron-down animate-bounce text-xs text-gladiator-crimson"></i>
+        </a>
+    </section>
+
+    <!-- ABOUT SECTION & REAL PHOTOS BREAKDOWN -->
+    <section id="about" class="py-20 bg-gladiator-base relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-red-950/60 border border-red-800/40 text-red-400 text-xs font-bold uppercase tracking-wider mb-4">
+                        <i class="fa-solid fa-shield-halved"></i> Sri Ram Nagar • Hyderabad
+                    </div>
+                    <h2 class="font-gladiator text-4xl sm:text-6xl text-white tracking-wide uppercase leading-tight">
+                        Built for Passion. <br>
+                        <span class="text-gladiator-crimson">Forged in Iron.</span>
+                    </h2>
+                    <p class="mt-6 text-slate-300 leading-relaxed text-sm sm:text-base">
+                        Led by <strong>M.A. Toufeeq</strong>, Gladiator Pro Fitness Studio offers Hyderabad's serious lifters and fitness enthusiasts a focused, high-energy environment. With custom ceiling ambient red neon strips, yellow warning hazard accents, and heavy-duty red-and-black biomechanical equipment, we empower you to surpass your physical boundaries every day.
+                    </p>
+
+                    <!-- Feature Badges -->
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="p-4 rounded-2xl bg-gladiator-card border border-gladiator-border">
+                            <div class="text-2xl text-red-500 font-gladiator mb-1">5:30 AM – 11:00 PM</div>
+                            <div class="text-xs text-slate-400 font-semibold uppercase">Daily Operating Hours</div>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-gladiator-card border border-gladiator-border">
+                            <div class="text-2xl text-gladiator-hazard font-gladiator mb-1">Ladies & Gents</div>
+                            <div class="text-xs text-slate-400 font-semibold uppercase">Certified Trainers Available</div>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-gladiator-card border border-gladiator-border">
+                            <div class="text-2xl text-emerald-400 font-gladiator mb-1">Up to 60 KG</div>
+                            <div class="text-xs text-slate-400 font-semibold uppercase">Heavy Dumbbell Arsenal</div>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-gladiator-card border border-gladiator-border">
+                            <div class="text-2xl text-blue-400 font-gladiator mb-1">Complete Diet</div>
+                            <div class="text-xs text-slate-400 font-semibold uppercase">Counselling & Tracking</div>
+                        </div>
+                    </div>
+
+                    <!-- Call Directly Button -->
+                    <div class="mt-8 flex items-center gap-4">
+                        <a href="tel:9948313442" class="px-6 py-3.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-heading font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-neon-red transition-all">
+                            <i class="fa-solid fa-phone"></i> Call 9948313442
+                        </a>
+                        <a href="tel:9642172195" class="px-6 py-3.5 rounded-xl bg-neutral-800 hover:bg-neutral-700 text-slate-200 font-heading font-bold text-xs uppercase tracking-wider flex items-center gap-2 border border-neutral-700 transition-all">
+                            <i class="fa-solid fa-phone"></i> Call 9642172195
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Facility Highlight Grid -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="rounded-3xl bg-gladiator-card border border-gladiator-border p-5 hover:border-red-600/50 transition-all">
+                            <div class="w-10 h-10 rounded-xl bg-red-600/20 text-red-500 flex items-center justify-center text-lg mb-3">
+                                <i class="fa-solid fa-dumbbell"></i>
+                            </div>
+                            <h4 class="font-heading font-bold text-white text-base">Heavy Strength Rig</h4>
+                            <p class="text-xs text-slate-400 mt-1">Multi-tier dumbbell racks, Olympic bars, and dual-cable cross pulleys.</p>
+                        </div>
+                        <div class="rounded-3xl bg-gladiator-card border border-gladiator-border p-5 hover:border-red-600/50 transition-all">
+                            <div class="w-10 h-10 rounded-xl bg-yellow-500/20 text-yellow-500 flex items-center justify-center text-lg mb-3">
+                                <i class="fa-solid fa-person-running"></i>
+                            </div>
+                            <h4 class="font-heading font-bold text-white text-base">Cardio Decks</h4>
+                            <p class="text-xs text-slate-400 mt-1">High-incline heavy-duty treadmills, cross-trainers, and spin cycles.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-6">
+                        <div class="rounded-3xl bg-gladiator-card border border-gladiator-border p-5 hover:border-red-600/50 transition-all">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg mb-3">
+                                <i class="fa-solid fa-apple-whole"></i>
+                            </div>
+                            <h4 class="font-heading font-bold text-white text-base">Diet Counselling</h4>
+                            <p class="text-xs text-slate-400 mt-1">Personalized nutrition plans for muscle hyper-gain or rapid fat shedding.</p>
+                        </div>
+                        <div class="rounded-3xl bg-gladiator-card border border-gladiator-border p-5 hover:border-red-600/50 transition-all">
+                            <div class="w-10 h-10 rounded-xl bg-rose-500/20 text-rose-400 flex items-center justify-center text-lg mb-3">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <h4 class="font-heading font-bold text-white text-base">Ladies & Gents</h4>
+                            <p class="text-xs text-slate-400 mt-1">Friendly, focused coaching atmosphere with dedicated supervision.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE CARD OFFERINGS (Directly from Business Card) -->
+    <section id="services" class="py-20 bg-gladiator-surface border-t border-gladiator-border relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-heading font-black tracking-widest text-gladiator-crimson uppercase">Signature Specialties</span>
+                <h2 class="font-gladiator text-4xl sm:text-6xl text-white tracking-wide mt-2">Core Training Divisions</h2>
+                <p class="text-slate-400 text-sm sm:text-base mt-2">Every program listed on our official business card is delivered with disciplined, coach-led routines.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- 1. Cardio -->
+                <div class="group p-6 rounded-3xl bg-gladiator-card border border-gladiator-border hover:border-red-600 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-neutral-900 border border-neutral-700 flex items-center justify-center text-red-500 text-2xl mb-6 group-hover:scale-110 group-hover:bg-red-600 group-hover:text-white transition-all shadow-md">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="font-heading font-black text-xl text-white">CARDIO CONDITIONING</h3>
+                    <p class="mt-3 text-xs sm:text-sm text-slate-400 leading-relaxed">
+                        Endurance sessions on commercial treadmills, stair machines, and ellipticals calibrated to maximize caloric expenditure and lung stamina.
+                    </p>
+                    <ul class="mt-4 space-y-1.5 text-xs text-slate-300">
+                        <li><i class="fa-solid fa-check text-red-500 mr-2"></i> Fat-burn heart rate monitoring</li>
+                        <li><i class="fa-solid fa-check text-red-500 mr-2"></i> HIIT intervals & sprints</li>
+                    </ul>
+                </div>
+
+                <!-- 2. Strength -->
+                <div class="group p-6 rounded-3xl bg-gladiator-card border border-gladiator-border hover:border-red-600 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-neutral-900 border border-neutral-700 flex items-center justify-center text-red-500 text-2xl mb-6 group-hover:scale-110 group-hover:bg-red-600 group-hover:text-white transition-all shadow-md">
+                        <i class="fa-solid fa-dumbbell"></i>
+                    </div>
+                    <h3 class="font-heading font-black text-xl text-white">STRENGTH & HYPERTROPHY</h3>
+                    <p class="mt-3 text-xs sm:text-sm text-slate-400 leading-relaxed">
+                        Heavy compound lifting routines utilizing custom red & black seated chest press, squat racks, leg presses, and heavy dumbbell sets.
+                    </p>
+                    <ul class="mt-4 space-y-1.5 text-xs text-slate-300">
+                        <li><i class="fa-solid fa-check text-red-500 mr-2"></i> Dumbbells up to 60 KG</li>
+                        <li><i class="fa-solid fa-check text-red-500 mr-2"></i> Biomechanic angle machines</li>
+                    </ul>
+                </div>
+
+                <!-- 3. Weight Gain -->
+                <div class="group p-6 rounded-3xl bg-gladiator-card border border-gladiator-border hover:border-red-600 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-neutral-900 border border-neutral-700 flex items-center justify-center text-red-500 text-2xl mb-6 group-hover:scale-110 group-hover:bg-red-600 group-hover:text-white transition-all shadow-md">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                    </div>
+                    <h3 class="font-heading font-black text-xl text-white">WEIGHT GAIN & BULKING</h3>
+                    <p class="mt-3 text-xs sm:text-sm text-slate-400 leading-relaxed">
+                        Progressive overload protocols paired with hyper-caloric dietary blueprints designed specifically for lean muscle acquisition without excessive fat.
+                    </p>
+                    <ul class="mt-4 space-y-1.5 text-xs text-slate-300">
+                        <li><i class="fa-solid fa-check text-red-500 mr-2"></i> Mass-building macros</li>
+                        <li><i class="fa-solid fa-check text-red-500 mr-2"></i> Form correction supervision</li>
+                    </ul>
+                </div>
+
+                <!-- 4. Weight Loss -->
+                <div class="group p-6 rounded-3xl bg-gladiator-card border border-gladiator-border hover:border-red-600 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-neutral-900 border border-neutral-700 flex items-center justify-center text-red-500 text-2xl mb-6 group-hover:scale-110 group-hover:bg-red-600 group-hover:text-white transition-all shadow-md">
+                        <i class="fa-solid fa-fire-flame-curved"></i>
+                    </div>
+                    <h3 class="font-heading font-black text-xl text-white">WEIGHT LOSS & SHREDDING</h3>
+                    <p class="mt-3 text-xs sm:text-sm text-slate-400 leading-relaxed">
+                        High-tempo circuit sessions, metabolic conditioning, and structured deficit nutritional support designed for steady, healthy body re-composition.
+                    </p>
+                    <ul class="mt-4 space-y-1.5 text-xs text-slate-300">
+                        <li><i class="fa-solid fa-check text-red-500 mr-2"></i> Weekly weigh-in & measurements</li>
+                        <li><i class="fa-solid fa-check text-red-500 mr-2"></i> High calorie-burn routines</li>
+                    </ul>
+                </div>
+
+                <!-- 5. Endurance -->
+                <div class="group p-6 rounded-3xl bg-gladiator-card border border-gladiator-border hover:border-red-600 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-neutral-900 border border-neutral-700 flex items-center justify-center text-red-500 text-2xl mb-6 group-hover:scale-110 group-hover:bg-red-600 group-hover:text-white transition-all shadow-md">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="font-heading font-black text-xl text-white">ATHLETIC ENDURANCE</h3>
+                    <p class="mt-3 text-xs sm:text-sm text-slate-400 leading-relaxed">
+                        Functional endurance drills that build stamina, core stabilization, joint integrity, and peak cardiovascular health.
+                    </p>
+                    <ul class="mt-4 space-y-1.5 text-xs text-slate-300">
+                        <li><i class="fa-solid fa-check text-red-500 mr-2"></i> High rep resistance training</li>
+                        <li><i class="fa-solid fa-check text-red-500 mr-2"></i> Core & agility drills</li>
+                    </ul>
+                </div>
+
+                <!-- 6. Diet Counselling -->
+                <div class="group p-6 rounded-3xl bg-gladiator-card border border-gladiator-border hover:border-red-600 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-neutral-900 border border-neutral-700 flex items-center justify-center text-red-500 text-2xl mb-6 group-hover:scale-110 group-hover:bg-red-600 group-hover:text-white transition-all shadow-md">
+                        <i class="fa-solid fa-kitchen-set"></i>
+                    </div>
+                    <h3 class="font-heading font-black text-xl text-white">DIET COUNSELLING</h3>
+                    <p class="mt-3 text-xs sm:text-sm text-slate-400 leading-relaxed">
+                        Nutrition is 70% of results. Direct consultation to eliminate cravings, track daily protein intake, and formulate sustainable meal routines.
+                    </p>
+                    <ul class="mt-4 space-y-1.5 text-xs text-slate-300">
+                        <li><i class="fa-solid fa-check text-red-500 mr-2"></i> Custom macro breakdown</li>
+                        <li><i class="fa-solid fa-check text-red-500 mr-2"></i> Veg & Non-Veg Indian meal plans</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE READINESS CALCULATOR (BMI, Calories, Protein) -->
+    <section id="calculator" class="py-20 bg-gladiator-base relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-heading font-black tracking-widest text-gladiator-crimson uppercase">Biometrics Engine</span>
+                <h2 class="font-gladiator text-4xl sm:text-5xl text-white mt-1">Gladiator Readiness Calculator</h2>
+                <p class="text-slate-400 text-sm mt-2">Compute your accurate BMI, daily calorie target (TDEE), and daily protein target instantly.</p>
+            </div>
+
+            <div class="bg-gladiator-card border border-gladiator-border rounded-3xl p-6 sm:p-10 shadow-2xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <!-- Controls -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Gender</label>
+                                <select id="userGender" onchange="computeReadiness()" class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-red-500">
+                                    <option value="male">Male (Gent)</option>
+                                    <option value="female">Female (Lady)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Age (Years)</label>
+                                <input type="number" id="userAge" value="25" min="14" max="85" onchange="computeReadiness()" class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-red-500">
+                            </div>
+                        </div>
+
+                        <!-- Height Slider -->
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-2">
+                                <span class="text-slate-400 uppercase tracking-wider">Height</span>
+                                <span class="text-red-400 font-mono text-sm"><span id="valHeight">175</span> cm</span>
+                            </div>
+                            <input type="range" id="sliderHeight" min="140" max="210" value="175" oninput="updateHeight(this.value)" class="w-full accent-red-600 bg-neutral-800 rounded-lg cursor-pointer">
+                        </div>
+
+                        <!-- Weight Slider -->
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-2">
+                                <span class="text-slate-400 uppercase tracking-wider">Current Weight</span>
+                                <span class="text-red-400 font-mono text-sm"><span id="valWeight">74</span> kg</span>
+                            </div>
+                            <input type="range" id="sliderWeight" min="40" max="150" value="74" oninput="updateWeight(this.value)" class="w-full accent-red-600 bg-neutral-800 rounded-lg cursor-pointer">
+                        </div>
+
+                        <!-- Fitness Goal -->
+                        <div>
+                            <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Primary Goal</label>
+                            <select id="userGoal" onchange="computeReadiness()" class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-red-500">
+                                <option value="cut">Fat Loss & Shredding (Caloric Deficit)</option>
+                                <option value="maintain">Maintenance & Muscle Tone</option>
+                                <option value="bulk">Weight Gain & Bulking (Hypertrophy Surplus)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Computed Output Display -->
+                    <div class="lg:col-span-5 bg-neutral-950/80 border border-neutral-800 rounded-2xl p-6 text-center space-y-6">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Body Mass Index (BMI)</span>
+                            <div id="outBMI" class="font-gladiator text-5xl text-white mt-1">24.2</div>
+                            <span id="outBMILabel" class="inline-block mt-1 text-xs px-2.5 py-0.5 rounded-full font-bold uppercase bg-emerald-950 text-emerald-400 border border-emerald-800/40">Healthy Range</span>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3 pt-4 border-t border-neutral-800">
+                            <div class="p-3 bg-neutral-900/60 rounded-xl">
+                                <div class="text-[10px] text-slate-400 uppercase font-bold">Target Calories</div>
+                                <div id="outCalories" class="font-gladiator text-2xl text-red-500 mt-1">2,150</div>
+                                <div class="text-[10px] text-slate-400">kcal/day</div>
+                            </div>
+                            <div class="p-3 bg-neutral-900/60 rounded-xl">
+                                <div class="text-[10px] text-slate-400 uppercase font-bold">Protein Target</div>
+                                <div id="outProtein" class="font-gladiator text-2xl text-gladiator-hazard mt-1">148g</div>
+                                <div class="text-[10px] text-slate-400">grams/day</div>
+                            </div>
+                        </div>
+
+                        <button onclick="shareReadinessOnWhatsApp()" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-heading font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            Send Goals to Coach Toufeeq
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEMBERSHIP PACKAGES -->
+    <section id="membership" class="py-20 bg-gladiator-surface border-t border-gladiator-border relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-heading font-black tracking-widest text-gladiator-crimson uppercase">Transparent Memberships</span>
+                <h2 class="font-gladiator text-4xl sm:text-6xl text-white tracking-wide mt-1">Choose Your Tier</h2>
+                <p class="text-slate-400 text-sm mt-2">No hidden enrollment fees. Complete floor access from 5:30 AM to 11:00 PM.</p>
+
+                <!-- Billing Cycle Selector -->
+                <div class="mt-6 inline-flex p-1.5 rounded-2xl bg-neutral-900 border border-neutral-800">
+                    <button id="btnMonth" onclick="setBilling('month')" class="px-5 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-red-600 text-white shadow-neon-red">Monthly</button>
+                    <button id="btnQuarter" onclick="setBilling('quarter')" class="px-5 py-2 rounded-xl text-xs font-bold uppercase text-slate-400 hover:text-white transition-all">3 Months</button>
+                    <button id="btnAnnual" onclick="setBilling('annual')" class="px-5 py-2 rounded-xl text-xs font-bold uppercase text-slate-400 hover:text-white transition-all">Annual (Best Value)</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                
+                <!-- Tier 1: Iron Starter -->
+                <div class="rounded-3xl bg-gladiator-card border border-gladiator-border p-8 flex flex-col justify-between hover:border-neutral-700 transition-all">
+                    <div>
+                        <span class="text-xs font-bold uppercase text-slate-400 tracking-wider">Foundation</span>
+                        <h3 class="font-heading font-black text-2xl text-white mt-1">IRON STARTER</h3>
+                        <div class="mt-4 flex items-baseline gap-1">
+                            <span class="font-gladiator text-5xl text-white" id="priceTier1">₹1,200</span>
+                            <span class="text-xs text-slate-400 font-semibold uppercase" id="termTier1">/ Month</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Ideal for casual lifters and cardio enthusiasts.</p>
+                        
+                        <ul class="mt-6 space-y-3 text-xs text-slate-300">
+                            <li><i class="fa-solid fa-check text-red-500 mr-2"></i> Full Gym Floor Access</li>
+                            <li><i class="fa-solid fa-check text-red-500 mr-2"></i> All Cardio Machines & Treadmills</li>
+                            <li><i class="fa-solid fa-check text-red-500 mr-2"></i> General Floor Trainer Guidance</li>
+                            <li><i class="fa-solid fa-check text-red-500 mr-2"></i> Access: 5:30 AM to 11:00 PM</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/919948313442?text=Hi%20Toufeeq%20Bhai,%20I%20want%20to%20enroll%20in%20the%20Iron%20Starter%20Plan" target="_blank" class="mt-8 w-full py-3.5 rounded-xl bg-neutral-900 hover:bg-neutral-800 border border-neutral-700 text-white font-heading font-bold text-xs uppercase tracking-wider text-center block transition-all">
+                        Join Starter Tier
+                    </a>
+                </div>
+
+                <!-- Tier 2: Gladiator Pro (Featured) -->
+                <div class="rounded-3xl bg-neutral-900 border-2 border-red-600 p-8 flex flex-col justify-between shadow-neon-red relative scale-105 z-10">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-red-600 text-white text-[10px] font-black uppercase tracking-widest shadow">
+                        Most Popular
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold uppercase text-red-400 tracking-wider">Most Recommended</span>
+                        <h3 class="font-heading font-black text-2xl text-white mt-1">GLADIATOR PRO</h3>
+                        <div class="mt-4 flex items-baseline gap-1">
+                            <span class="font-gladiator text-5xl text-red-500" id="priceTier2">₹2,200</span>
+                            <span class="text-xs text-slate-400 font-semibold uppercase" id="termTier2">/ Month</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Comprehensive strength, diet counselling & workout charts.</p>
+                        
+                        <ul class="mt-6 space-y-3 text-xs text-slate-200">
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Everything in Iron Starter</li>
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> <strong>Personalized Diet Counselling</strong></li>
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> <strong>Monthly Workout Chart Blueprint</strong></li>
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Dedicated Ladies/Gents Trainer Supervision</li>
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Body Fat & Biometrics Tracking</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/919948313442?text=Hi%20Toufeeq%20Bhai,%20I%20want%20to%20enroll%20in%20the%20Gladiator%20Pro%20Plan!" target="_blank" class="mt-8 w-full py-4 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-heading font-black text-xs uppercase tracking-wider text-center block shadow-neon-red transition-all">
+                        Join Gladiator Pro
+                    </a>
+                </div>
+
+                <!-- Tier 3: Elite Personal -->
+                <div class="rounded-3xl bg-gladiator-card border border-gladiator-border p-8 flex flex-col justify-between hover:border-neutral-700 transition-all">
+                    <div>
+                        <span class="text-xs font-bold uppercase text-slate-400 tracking-wider">1-on-1 Coaching</span>
+                        <h3 class="font-heading font-black text-2xl text-white mt-1">ELITE 1-ON-1</h3>
+                        <div class="mt-4 flex items-baseline gap-1">
+                            <span class="font-gladiator text-5xl text-white" id="priceTier3">₹4,500</span>
+                            <span class="text-xs text-slate-400 font-semibold uppercase" id="termTier3">/ Month</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Exclusive trainer assigned for each workout session.</p>
+                        
+                        <ul class="mt-6 space-y-3 text-xs text-slate-300">
+                            <li><i class="fa-solid fa-check text-red-500 mr-2"></i> Dedicated 1-on-1 Certified Trainer</li>
+                            <li><i class="fa-solid fa-check text-red-500 mr-2"></i> Custom Indian Diet & Caloric Plan</li>
+                            <li><i class="fa-solid fa-check text-red-500 mr-2"></i> Form Correction & Spotting Assistance</li>
+                            <li><i class="fa-solid fa-check text-red-500 mr-2"></i> Daily WhatsApp Progress Monitoring</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/919948313442?text=Hi%20Toufeeq%20Bhai,%20I%20am%20interested%20in%20the%20Elite%201-on-1%20Personal%20Training%20Plan" target="_blank" class="mt-8 w-full py-3.5 rounded-xl bg-neutral-900 hover:bg-neutral-800 border border-neutral-700 text-white font-heading font-bold text-xs uppercase tracking-wider text-center block transition-all">
+                        Inquire Elite PT
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION & GOOGLE MAPS SECTION -->
+    <section id="location" class="py-20 bg-gladiator-base relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-xs font-heading font-black tracking-widest text-gladiator-crimson uppercase">Locate Our Studio</span>
+                        <h2 class="font-gladiator text-4xl sm:text-5xl text-white mt-1">Visit The Iron Arena</h2>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-gladiator-card border border-gladiator-border space-y-4">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-red-500 text-lg mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Official Address</h4>
+                                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                                    8-4-551/A/9, Sri Ram Nagar, Near Lucky Function Hall,<br>
+                                    Opp. Padma Rekha Apartment,<br>
+                                    Hyderabad, Telangana 500018
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 pt-3 border-t border-neutral-800">
+                            <i class="fa-solid fa-clock text-gladiator-hazard text-lg"></i>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Working Hours</h4>
+                                <p class="text-xs text-slate-300">Morning 5:30 AM to Night 11:00 PM (Daily)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 pt-3 border-t border-neutral-800">
+                            <i class="fa-solid fa-user-tie text-blue-400 text-lg"></i>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Proprietor</h4>
+                                <p class="text-xs text-slate-300">M.A. Toufeeq</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <a href="https://maps.google.com/?q=8-4-551/A/9,+Sri+Ram+Nagar,+Near+Lucky+Function+Hall,+Opp.+Padma+Rekha+Apartment,+Hyderabad" target="_blank" class="flex-1 py-3.5 rounded-xl bg-red-600 hover:bg-red-500 text-white text-center font-heading font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-neon-red transition-all">
+                            <i class="fa-solid fa-location-arrow"></i> Open Google Maps
+                        </a>
+                        <a href="https://wa.me/919948313442?text=Hi%20Toufeeq%20Bhai,%20could%20you%20please%20send%20me%20the%20exact%20live%20location%20of%20Gladiator%20Pro%20Fitness%20Studio%20on%20WhatsApp?" target="_blank" class="flex-1 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-center font-heading font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Request Location
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Live Embedded Google Maps Frame -->
+                <div class="lg:col-span-7 rounded-3xl overflow-hidden border-2 border-gladiator-border bg-neutral-900 shadow-2xl h-[420px] relative">
+                    <iframe 
+                        class="w-full h-full grayscale-[25%] contrast-125"
+                        src="https://maps.google.com/maps?q=Gladiator+Pro+Fitness+Studio+Lucky+Function+Hall+Road+Jayanthi+Nagar+Kalyan+Nagar+Moti+Nagar+Hyderabad&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-neutral-950 border-t border-gladiator-border py-12 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <span class="font-gladiator text-2xl text-white">GLADIATOR <span class="text-red-500">PRO</span></span>
+                <span class="text-neutral-600">|</span>
+                <span>© 2026 Gladiator Pro Fitness Studio</span>
+            </div>
+
+            <div class="text-center sm:text-right">
+                <p>Proprietor: <strong class="text-white">M.A. Toufeeq</strong></p>
+                <p class="mt-0.5 text-neutral-500">Sri Ram Nagar, Hyderabad • Cell: 9948313442 / 9642172195</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FREE TRIAL MODAL -->
+    <div id="trialModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+        <div class="bg-gladiator-card border border-neutral-700 w-full max-w-md rounded-3xl p-6 sm:p-8 shadow-2xl relative">
+            <button onclick="closeModal('trialModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <h3 class="font-gladiator text-3xl text-white">Claim 1-Day Free Pass</h3>
+            <p class="text-xs text-slate-400 mt-1">Experience the red-neon floor and equipment with zero obligations.</p>
+
+            <form onsubmit="submitTrial(event)" class="mt-6 space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 uppercase mb-1">Your Full Name</label>
+                    <input type="text" id="passName" required placeholder="e.g. Rahul Sharma" class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-red-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 uppercase mb-1">Mobile / WhatsApp Number</label>
+                    <input type="tel" id="passPhone" required placeholder="e.g. 9876543210" class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-red-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 uppercase mb-1">Preferred Time of Visit</label>
+                    <select id="passTime" class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-red-500">
+                        <option>Morning (6:00 AM – 10:00 AM)</option>
+                        <option>Afternoon (11:00 AM – 4:00 PM)</option>
+                        <option>Evening (5:00 PM – 10:00 PM)</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full py-3.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-heading font-black text-xs uppercase tracking-wider shadow-neon-red transition-all">
+                    Generate WhatsApp Free Pass <i class="fa-solid fa-paper-plane ml-1"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 hidden bg-neutral-900 border border-red-600/80 text-white text-xs px-4 py-3 rounded-xl shadow-2xl flex items-center gap-2">
+        <i class="fa-solid fa-circle-check text-red-500"></i>
+        <span id="toastMsg">Success!</span>
+    </div>
+
+    <!-- JAVASCRIPT CONTROLLERS -->
+    <script>
+        // Sliders & Readiness Calculator
+        function updateHeight(val) {
+            const el = document.getElementById('valHeight');
+            if (el) el.innerText = val;
+            computeReadiness();
+        }
+
+        function updateWeight(val) {
+            const el = document.getElementById('valWeight');
+            if (el) el.innerText = val;
+            computeReadiness();
+        }
+
+        function computeReadiness() {
+            const gender = document.getElementById('userGender') ? document.getElementById('userGender').value : 'male';
+            const age = parseInt(document.getElementById('userAge') ? document.getElementById('userAge').value : 25) || 25;
+            const height = parseFloat(document.getElementById('sliderHeight') ? document.getElementById('sliderHeight').value : 175) || 175;
+            const weight = parseFloat(document.getElementById('sliderWeight') ? document.getElementById('sliderWeight').value : 74) || 74;
+            const goal = document.getElementById('userGoal') ? document.getElementById('userGoal').value : 'maintain';
+
+            // BMI computation
+            const hMeters = height / 100;
+            const bmi = (weight / (hMeters * hMeters)).toFixed(1);
+            
+            const outBMI = document.getElementById('outBMI');
+            const outBMILabel = document.getElementById('outBMILabel');
+            if (outBMI) outBMI.innerText = bmi;
+
+            if (outBMILabel) {
+                if (bmi < 18.5) {
+                    outBMILabel.innerText = 'Underweight';
+                    outBMILabel.className = 'inline-block mt-1 text-xs px-2.5 py-0.5 rounded-full font-bold uppercase bg-yellow-950 text-yellow-400 border border-yellow-800/40';
+                } else if (bmi < 24.9) {
+                    outBMILabel.innerText = 'Healthy Range';
+                    outBMILabel.className = 'inline-block mt-1 text-xs px-2.5 py-0.5 rounded-full font-bold uppercase bg-emerald-950 text-emerald-400 border border-emerald-800/40';
+                } else if (bmi < 29.9) {
+                    outBMILabel.innerText = 'Overweight';
+                    outBMILabel.className = 'inline-block mt-1 text-xs px-2.5 py-0.5 rounded-full font-bold uppercase bg-orange-950 text-orange-400 border border-orange-800/40';
+                } else {
+                    outBMILabel.innerText = 'High BMI';
+                    outBMILabel.className = 'inline-block mt-1 text-xs px-2.5 py-0.5 rounded-full font-bold uppercase bg-red-950 text-red-400 border border-red-800/40';
+                }
+            }
+
+            // Mifflin-St Jeor Formula
+            let bmr = (10 * weight) + (6.25 * height) - (5 * age);
+            bmr = (gender === 'male') ? bmr + 5 : bmr - 161;
+            let tdee = bmr * 1.45; // Moderately active lifter baseline
+
+            let targetCalories = Math.round(tdee);
+            let proteinMultiplier = 1.8;
+
+            if (goal === 'cut') {
+                targetCalories = Math.round(tdee - 450);
+                proteinMultiplier = 2.0;
+            } else if (goal === 'bulk') {
+                targetCalories = Math.round(tdee + 400);
+                proteinMultiplier = 2.2;
+            }
+
+            const targetProtein = Math.round(weight * proteinMultiplier);
+
+            const outCalEl = document.getElementById('outCalories');
+            const outProtEl = document.getElementById('outProtein');
+            if (outCalEl) outCalEl.innerText = targetCalories.toLocaleString();
+            if (outProtEl) outProtEl.innerText = targetProtein + 'g';
+        }
+
+        // WhatsApp Readiness Sharing
+        function shareReadinessOnWhatsApp() {
+            const bmi = document.getElementById('outBMI').innerText;
+            const cal = document.getElementById('outCalories').innerText;
+            const prot = document.getElementById('outProtein').innerText;
+            const goal = document.getElementById('userGoal').selectedOptions[0].text;
+
+            const text = encodeURIComponent(`Hi Toufeeq Bhai, I calculated my fitness readiness on Gladiator Pro Studio website:
+- BMI: ${bmi}
+- Goal: ${goal}
+- Target Calories: ${cal} kcal/day
+- Target Protein: ${prot}
+Please advise on membership and training!`);
+
+            window.open(`https://wa.me/919948313442?text=${text}`, '_blank');
+        }
+
+        // Billing Cycle Pricing Adjustments
+        function setBilling(cycle) {
+            const btnMonth = document.getElementById('btnMonth');
+            const btnQuarter = document.getElementById('btnQuarter');
+            const btnAnnual = document.getElementById('btnAnnual');
+
+            const p1 = document.getElementById('priceTier1');
+            const p2 = document.getElementById('priceTier2');
+            const p3 = document.getElementById('priceTier3');
+
+            const t1 = document.getElementById('termTier1');
+            const t2 = document.getElementById('termTier2');
+            const t3 = document.getElementById('termTier3');
+
+            // Reset classes
+            [btnMonth, btnQuarter, btnAnnual].forEach(btn => {
+                if (btn) {
+                    btn.className = "px-5 py-2 rounded-xl text-xs font-bold uppercase text-slate-400 hover:text-white transition-all";
+                }
+            });
+
+            if (cycle === 'month') {
+                if (btnMonth) btnMonth.className = "px-5 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-red-600 text-white shadow-neon-red";
+                if (p1) p1.innerText = "₹1,200";
+                if (p2) p2.innerText = "₹2,200";
+                if (p3) p3.innerText = "₹4,500";
+                if (t1) t1.innerText = "/ Month";
+                if (t2) t2.innerText = "/ Month";
+                if (t3) t3.innerText = "/ Month";
+            } else if (cycle === 'quarter') {
+                if (btnQuarter) btnQuarter.className = "px-5 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-red-600 text-white shadow-neon-red";
+                if (p1) p1.innerText = "₹3,200";
+                if (p2) p2.innerText = "₹5,800";
+                if (p3) p3.innerText = "₹12,000";
+                if (t1) t1.innerText = "/ 3 Months";
+                if (t2) t2.innerText = "/ 3 Months";
+                if (t3) t3.innerText = "/ 3 Months";
+            } else if (cycle === 'annual') {
+                if (btnAnnual) btnAnnual.className = "px-5 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-red-600 text-white shadow-neon-red";
+                if (p1) p1.innerText = "₹11,500";
+                if (p2) p2.innerText = "₹21,000";
+                if (p3) p3.innerText = "₹42,000";
+                if (t1) t1.innerText = "/ Year";
+                if (t2) t2.innerText = "/ Year";
+                if (t3) t3.innerText = "/ Year";
+            }
+        }
+
+        // Modal Controls
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) modal.classList.remove('hidden');
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) modal.classList.add('hidden');
+        }
+
+        // Free Pass WhatsApp Pipeline
+        function submitTrial(e) {
+            e.preventDefault();
+            const name = document.getElementById('passName').value;
+            const phone = document.getElementById('passPhone').value;
+            const time = document.getElementById('passTime').value;
+
+            const text = encodeURIComponent(`Hi Toufeeq Bhai, I would like to claim my 1-Day Free Trial Pass at Gladiator Pro Fitness Studio:
+- Name: ${name}
+- Phone: ${phone}
+- Preferred Time: ${time}`);
+
+            window.open(`https://wa.me/919948313442?text=${text}`, '_blank');
+            closeModal('trialModal');
+            showToast('Pass Created! Redirecting to WhatsApp...');
+        }
+
+        // Toast feedback
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            if (toast && toastMsg) {
+                toastMsg.innerText = msg;
+                toast.classList.remove('hidden');
+                setTimeout(() => {
+                    toast.classList.add('hidden');
+                }, 3500);
+            }
+        }
+
+        // Mobile Menu toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('mobileMenuBtn');
+            const menu = document.getElementById('mobileMenu');
+            if (menuBtn && menu) {
+                menuBtn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
+            computeReadiness();
+        });
+    </script>
+</body>
+</html>
