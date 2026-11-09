@@ -159,13 +159,13 @@
         .particle:nth-child(3) { animation-delay: 2.4s; }
         .particle:nth-child(4) { animation-delay: 0.6s; }
 
-        /* Video overlay gradient for readability */
+        /* Video overlay gradient - lighter so the gym video stays clear and bright */
         .video-overlay {
             background: linear-gradient(
                 to bottom,
-                rgba(7, 8, 10, 0.75) 0%,
-                rgba(7, 8, 10, 0.55) 40%,
-                rgba(7, 8, 10, 0.85) 100%
+                rgba(7, 8, 10, 0.40) 0%,
+                rgba(7, 8, 10, 0.20) 40%,
+                rgba(7, 8, 10, 0.50) 100%
             );
         }
 
@@ -191,36 +191,6 @@
             transform: translate(-50%, -50%);
             border: 0;
             pointer-events: none;
-        }
-        /* Fallback play button when autoplay is blocked */
-        .video-play-fallback {
-            position: absolute;
-            inset: 0;
-            z-index: 15;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(0,0,0,0.45);
-            cursor: pointer;
-            transition: opacity 0.4s ease;
-        }
-        .video-play-fallback.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-        .video-play-fallback .play-btn {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: rgba(220, 38, 38, 0.9);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 0 40px rgba(220, 38, 38, 0.6);
-            transition: transform 0.2s ease;
-        }
-        .video-play-fallback:hover .play-btn {
-            transform: scale(1.1);
         }
 
         /* Icon spin-3d on hover */
@@ -339,14 +309,7 @@
             </iframe>
         </div>
 
-        <!-- Fallback Play Button (shows if autoplay is blocked) -->
-        <div class="video-play-fallback" id="videoPlayFallback" onclick="forcePlayVideo()">
-            <div class="play-btn">
-                <i class="fa-solid fa-play text-white text-2xl ml-1"></i>
-            </div>
-        </div>
-
-        <!-- Dark gradient overlay for text readability -->
+        <!-- Dark gradient overlay (lightened so video stays clear) -->
         <div class="absolute inset-0 video-overlay z-10 pointer-events-none"></div>
 
         <!-- Ambient Red Neon accent line -->
@@ -931,36 +894,18 @@
 
     <!-- JAVASCRIPT CONTROLLERS -->
     <script>
-        // Force YouTube video play (works even when autoplay is blocked)
+        // Help YouTube video start (some browsers block autoplay until interaction)
         function forcePlayVideo() {
             const iframe = document.getElementById('ytPlayer');
-            const fallback = document.getElementById('videoPlayFallback');
-            if (iframe) {
-                // Reload with autoplay to force start
-                const src = iframe.src;
-                iframe.src = src.includes('autoplay=1') ? src : src + '&autoplay=1';
-                // Also try postMessage API
+            if (iframe && iframe.contentWindow) {
                 iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
                 iframe.contentWindow.postMessage('{"event":"command","func":"mute","args":""}', '*');
             }
-            if (fallback) {
-                fallback.classList.add('hidden');
-            }
         }
 
-        // Hide fallback after a few seconds if video likely started, or on any interaction
         document.addEventListener('DOMContentLoaded', () => {
             computeReadiness();
-
-            const fallback = document.getElementById('videoPlayFallback');
-            // Auto-hide fallback after 4 seconds (assume autoplay worked) or on first click
-            setTimeout(() => {
-                if (fallback && !fallback.classList.contains('hidden')) {
-                    // Keep it visible a bit longer on local files
-                }
-            }, 4000);
-
-            // Any click on page also tries to start video
+            // First click anywhere helps start the video if autoplay was blocked
             document.body.addEventListener('click', function once() {
                 forcePlayVideo();
                 document.body.removeEventListener('click', once);
@@ -1154,4 +1099,5 @@ Please advise on membership and training!`);
     </script>
 </body>
 </html>
+Grok finished responding
 Fix Video Playback and Add 3D Animations - Grok
