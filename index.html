@@ -159,6 +159,35 @@
         .particle:nth-child(3) { animation-delay: 2.4s; }
         .particle:nth-child(4) { animation-delay: 0.6s; }
 
+        /* Logo side text + equipment icons animation */
+        @keyframes equipBounce {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-4px) rotate(8deg); }
+        }
+        @keyframes equipPulse {
+            0%, 100% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.15); }
+        }
+        .equip-icon {
+            animation: equipBounce 2.5s ease-in-out infinite;
+            display: inline-block;
+        }
+        .equip-icon:nth-child(2) { animation-delay: 0.3s; }
+        .equip-icon:nth-child(3) { animation-delay: 0.6s; }
+        .equip-icon:nth-child(4) { animation-delay: 0.9s; }
+        @keyframes nameShine {
+            0% { background-position: -120% center; }
+            100% { background-position: 120% center; }
+        }
+        .logo-name-shine {
+            background: linear-gradient(90deg, #ffffff 0%, #ffffff 40%, #f87171 50%, #ffffff 60%, #ffffff 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: nameShine 4s linear infinite;
+        }
+
         /* Video overlay - minimal darkening so gym video is bright */
         .video-overlay {
             background: linear-gradient(
@@ -267,13 +296,28 @@
     <!-- MAIN NAVIGATION -->
     <header class="sticky top-0 z-50 bg-gladiator-base/90 backdrop-blur-md border-b border-gladiator-border/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 sm:h-28 flex items-center justify-between">
-            <!-- Brand Logo (HD) -->
-            <a href="#" class="flex items-center group shrink-0">
+            <!-- Brand Logo (HD) + Gym Name with animated equipment -->
+            <a href="#" class="flex items-center gap-3 sm:gap-4 group shrink-0">
                 <img 
                     src="gladiator-logo-4k.png" 
                     alt="Gladiator Pro Fitness Studio" 
                     class="h-20 sm:h-24 md:h-28 w-auto object-contain drop-shadow-[0_0_12px_rgba(220,38,38,0.45)] group-hover:scale-105 transition-transform float-3d"
                 >
+                <div class="hidden sm:flex flex-col justify-center">
+                    <div class="flex items-center gap-2">
+                        <span class="font-gladiator text-2xl md:text-3xl tracking-wide logo-name-shine leading-none">GLADIATOR</span>
+                        <span class="font-gladiator text-2xl md:text-3xl tracking-wide text-red-500 leading-none">PRO</span>
+                    </div>
+                    <div class="flex items-center gap-2 mt-0.5">
+                        <span class="text-[10px] md:text-xs font-heading font-extrabold uppercase tracking-widest text-slate-400">Fitness Studio</span>
+                        <span class="flex items-center gap-1.5 text-red-500/80 text-xs ml-1">
+                            <i class="fa-solid fa-dumbbell equip-icon"></i>
+                            <i class="fa-solid fa-heart-pulse equip-icon text-rose-400"></i>
+                            <i class="fa-solid fa-fire equip-icon text-gladiator-hazard"></i>
+                            <i class="fa-solid fa-person-running equip-icon text-emerald-400"></i>
+                        </span>
+                    </div>
+                </div>
             </a>
 
             <!-- Desktop Nav Links -->
