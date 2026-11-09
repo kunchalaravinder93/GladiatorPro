@@ -205,6 +205,18 @@
             border: 0;
             pointer-events: none;
         }
+        /* Mobile: reduce over-scaling so video looks sharper */
+        @media (max-width: 768px) {
+            .youtube-bg iframe {
+                width: 300%;
+                height: 100%;
+                min-width: 300%;
+                min-height: 100%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
 
         /* Icon spin-3d on hover */
         .icon-3d {
@@ -313,7 +325,7 @@
         <div class="youtube-bg" id="youtubeBg">
             <iframe 
                 id="ytPlayer"
-                src="https://www.youtube-nocookie.com/embed/IEgnvMumVXw?autoplay=1&mute=1&loop=1&playlist=IEgnvMumVXw&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&iv_load_policy=3&disablekb=1&fs=0&origin=https://www.youtube.com"
+                src="https://www.youtube-nocookie.com/embed/IEgnvMumVXw?autoplay=1&mute=1&loop=1&playlist=IEgnvMumVXw&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&iv_load_policy=3&disablekb=1&fs=0&vq=hd1080"
                 title="Gladiator Pro Fitness Studio"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
